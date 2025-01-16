@@ -1,0 +1,21 @@
+import Testimonial from "./Testimonial"
+
+const Testimonials = () => {
+  return (
+    <section>
+      <div className='py-20 w-[80%] m-auto flex flex-col justify-center items-center gap-10 '>
+        <h2 className='text-2xl font-bold text-black/60'>TESTIMONIOS DE LA EXPERIENCIA</h2>
+        <div className='border-b-1 border-black/60 w-[30rem]' />
+        <p className='text-xl w-[80%] text-center text-black/60'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi esse molestias magni, quis cupiditate distinctio repellendus, quidem ea nesciunt vero, repudiandae at corrupti suscipit amet minima. Qui consequuntur esse perspiciatis?
+          Libero ipsum quo cupiditate placeat aliquid, a ullam. Impedit facere rerum voluptatum culpa commodi nostrum amet repellat excepturi dicta dignissimos itaque quos molestias provident odio ut, accusantium adipisci fuga maxime!</p>
+      </div>
+      <article className="flex flex-col gap-20">
+        <Testimonial reverse={false} />
+        <Testimonial reverse={true} />
+        <Testimonial reverse={false} />
+      </article>
+    </section>
+  )
+}
+
+export default Testimonials
