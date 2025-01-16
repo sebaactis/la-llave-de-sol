@@ -8,7 +8,7 @@ import img from "@/public/benefitsImg.jpg"
 
 const Benefits = () => {
   return (
-    <section className="container mx-auto px-6 py-16">
+    <section className="container mx-auto px-6 py-16" id="benefits">
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
           <div>
