@@ -6,13 +6,13 @@ import Presentation from "@/components/Presentation";
 import Testimonials from "@/components/Testimonials";
 export default function Home() {
   return (
-    <section>
+    <>
       <Intro />
       <Presentation />
       <Benefits />
       <Testimonials />
       <CallAction />
       <Contact />
-    </section>
+    </>
   );
 }

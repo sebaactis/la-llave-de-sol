@@ -1,9 +1,11 @@
 
 
+import { Mona_Sans } from "next/font/google";
+
 import { NavbarComponent } from "@/components/NavbarComponent";
 import NewsletterPopup from "@/components/NewsletterPopup";
+
 import "@/styles/globals.css";
-import { Mona_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "La Llave de Sol",
