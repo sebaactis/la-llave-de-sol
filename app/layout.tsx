@@ -1,5 +1,7 @@
 
 
+import { NavbarComponent } from "@/components/NavbarComponent";
+import NewsletterPopup from "@/components/NewsletterPopup";
 import "@/styles/globals.css";
 import { Mona_Sans } from "next/font/google";
 
@@ -23,8 +25,9 @@ export default function RootLayout({
       <body
         className={`${monoSans.className} min-h-screen`}
       >
-        
+        <NavbarComponent />
         <main>
+          <NewsletterPopup />
           {children}
         </main>
       </body>
