@@ -19,8 +19,8 @@ export const NavbarComponent = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     const menuItems = [
-        { title: "HOME", link: "/" },
-        { title: "BENEFICIOS", link: "/productos" },
+        { title: "HOME", link: "#home" },
+        { title: "BENEFICIOS", link: "#benefits" },
         { title: "TESTIMONIOS", link: "/who" },
         { title: "EXPERIENCIA", link: "/where" },
         { title: "CONTACTO", link: "/contact" },
