@@ -1,6 +1,7 @@
 
 
 import { Mona_Sans } from "next/font/google";
+import { Metadata } from "next";
 
 import { NavbarComponent } from "@/components/NavbarComponent";
 import NewsletterPopup from "@/components/NewsletterPopup";
