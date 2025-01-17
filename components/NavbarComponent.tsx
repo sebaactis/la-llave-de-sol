@@ -52,9 +52,9 @@ export const NavbarComponent = () => {
             onMenuOpenChange={setIsMenuOpen}
         >
             <NavbarContent>
-                <NavbarBrand className={`${isScrolled ? "mt-5 md:mt-2" : "mt-20"} `}>
+                <NavbarBrand className={`${isScrolled ? "mt-5 md:mt-2" : "mt-20"}`}>
                     <Link href="/">
-                        <Image alt="logo" src={logo} width={isScrolled ? 40 : 70}/>
+                        <Image alt="logo" className="transition-all duration-200" src={logo} width={isScrolled ? 40 : 70}/>
                     </Link>
                 </NavbarBrand>
 
