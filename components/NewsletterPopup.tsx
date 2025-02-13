@@ -29,9 +29,9 @@ const NewsletterPopup = () => {
                         ✕
                     </button>
 
-                    <h2 className="text-xl font-bold text-center mb-4">¡Suscríbete a nuestro Newsletter!</h2>
+                    <h2 className="text-xl font-bold text-center mb-4">7 días de desayuno saludable</h2>
                     <p className="text-gray-600 text-center mb-6">
-                        Recibe las últimas novedades, promociones y eventos directamente en tu correo.
+                        Bebillo, empezá tu día con energía. Te regalo 1 SEMANA de DESAYUNOS SALUDABLES, SIN AZÚCAR Y SIN GLÚTEN
                     </p>
                     <form className="flex flex-col gap-4">
                         <input
@@ -44,7 +44,7 @@ const NewsletterPopup = () => {
                             className="bg-[#f48e22] text-white font-bold py-2 px-4 rounded-md hover:bg-[#f48e22cb] transition-all"
                             type="submit"
                         >
-                            Suscribirme
+                            LO QUIERO YA
                         </button>
                     </form>
                 </div>
