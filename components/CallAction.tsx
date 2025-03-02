@@ -1,5 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
+import { playfairDisplay } from "@/utils/typographies";
+
 const CallAction = () => {
 
   const phoneNumber = "+5491124063003";
@@ -8,7 +10,7 @@ const CallAction = () => {
   return (
     <section className="py-6 md:py-16 my-10" id="call-to-action">
       <div className='py-5 md:py-20 w-[80%] m-auto flex flex-col justify-center items-center gap-4 md:gap-5'>
-        <h2 className='text-2xl font-bold text-black/60 text-center md:text-start'>¡VOS TAMBIÉN PODÉS SER PARTE DEL CAMBIO!</h2>
+        <h2 className={` ${playfairDisplay.className} text-3xl font-bold text-black/60 text-center md:text-start`}>¡VOS TAMBIÉN PODÉS SER PARTE DEL CAMBIO!</h2>
         <div className='border-b-1 border-black/50 w-[15rem] md:w-[30rem]' />
       </div>
 
@@ -22,7 +24,7 @@ const CallAction = () => {
 
         <div className='border-b-1 border-black/50 w-[15rem] md:w-[30rem] m-auto mt-16' />
 
-        <div className='flex flex-col items-center justify-center mt-10 gap-5 bg-[#c4ac92] rounded-md w-[90%] md:w-[50%] py-10 m-auto'>
+        <div className='flex flex-col items-center justify-center mt-10 gap-5 bg-[#FF972A] rounded-3xl w-[90%] md:w-[50%] py-10 m-auto'>
           <p className='text-xl text-white text-center md:text-start'>
             <span className='font-bold mr-1'>Proxima fecha de la experencia:</span>
             DD/MM/YYYY

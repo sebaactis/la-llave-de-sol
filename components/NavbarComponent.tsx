@@ -12,26 +12,37 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import logo from "@/public/logo.webp"
+import logo from "@/public/logo.png"
+import { montserrat } from "@/utils/typographies";
 
 export const NavbarComponent = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isAtBenefits, setIsAtBenefits] = useState(false);
 
     const menuItems = [
         { title: "HOME", link: "/" },
-        { title: "BENEFICIOS", link: "/" },
-        { title: "TESTIMONIOS", link: "/" },
-        { title: "EXPERIENCIA", link: "/" },
-        { title: "CONTACTO", link: "/" },
+        { title: "BENEFICIOS", link: "#benefits" },
+        { title: "TESTIMONIOS", link: "#testimonials" },
+        { title: "EXPERIENCIA", link: "#call-to-action" },
+        { title: "CONTACTO", link: "#contact" },
     ];
 
     useEffect(() => {
         const handleScroll = () => {
+            const benefitsSection = document.getElementById("benefits");
+            const benefitsOffset = benefitsSection ? benefitsSection.offsetTop - 200 : 0;
+
             if (window.scrollY > 160) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
+            }
+
+            if (window.scrollY >= benefitsOffset) {
+                setIsAtBenefits(true);
+            } else {
+                setIsAtBenefits(false);
             }
         };
 
@@ -44,9 +55,10 @@ export const NavbarComponent = () => {
 
     return (
         <Navbar
-            className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black/40 md:bg-black/10 backdrop-blur-md py-2" : "bg-transparent"
+            className={`${montserrat.className} sticky top-0 z-50 transition-all duration-300 ${isAtBenefits ? "bg-green-400/90 py-3" : isScrolled ? "bg-black/40 md:bg-black/10 backdrop-blur-md py-3" : "bg-transparent"
                 }`}
             isBlurred={false}
+            isMenuOpen={isMenuOpen}
             maxWidth="full"
             position="sticky"
             onMenuOpenChange={setIsMenuOpen}
@@ -54,7 +66,7 @@ export const NavbarComponent = () => {
             <NavbarContent>
                 <NavbarBrand className={`${isScrolled ? "mt-5 md:mt-2" : "mt-20"}`}>
                     <Link href="/">
-                        <Image alt="logo" className="transition-all duration-200" src={logo} width={isScrolled ? 40 : 70}/>
+                        <Image alt="logo" className={`transition-all ${isScrolled ? "w-[60%]" : "w-[50%]"} duration-400 ${isScrolled ? 'pb-6 md:pb-3.5' : ""}`} src={logo} width={isScrolled ? 100 : 140} />
                     </Link>
                 </NavbarBrand>
 
@@ -67,7 +79,7 @@ export const NavbarComponent = () => {
                             key={`${item}-${index}`}
                             className="text-white px-2 py-2 2xl:px-2 transition-all duration-200 navbar-item"
                         >
-                            <Link className="text-lg font-extrabold" href={item.link}>
+                            <Link className="text-xl" href={item.link}>
                                 {item.title}
                             </Link>
                         </NavbarMenuItem>
@@ -84,7 +96,7 @@ export const NavbarComponent = () => {
                 <NavbarMenu className="flex flex-col items-center sm:hidden pt-5 gap-2 bg-black/40">
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
-                            <Link className="text-xl italic text-white" href={item.link}>
+                            <Link className="text-xl italic text-white" href={item.link} onClick={() => setIsMenuOpen(false)}>
                                 {item.title}
                             </Link>
                         </NavbarMenuItem>
