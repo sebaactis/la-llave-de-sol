@@ -65,7 +65,7 @@ const CallAction = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 
           <div
-            className={`flex justify-center transition-all duration-1000 transform ${isVideoVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
+            className={`flex justify-center transition-all duration-1000 transform md:${isVideoVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
               <video
@@ -87,7 +87,7 @@ const CallAction = () => {
           </div>
 
           <div
-            className={`transition-all duration-1000 delay-300 transform ${isVideoVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
+            className={`transition-all duration-1000 delay-300 transform md:${isVideoVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
           >
             <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-3xl shadow-xl overflow-hidden">
               <div className="relative">
