@@ -66,7 +66,7 @@ export const NavbarComponent = () => {
             <NavbarContent>
                 <NavbarBrand className={`${isScrolled ? "mt-5 md:mt-2" : "mt-20"}`}>
                     <Link href="/">
-                        <Image alt="logo" className={`transition-all ${isScrolled ? "w-[60%]" : "w-[50%]"} duration-400 ${isScrolled ? 'pb-6 md:pb-3.5' : ""}`} src={logo} width={isScrolled ? 100 : 140} />
+                        <Image alt="logo" className={`transition-all ${isScrolled ? "w-[60%]" : "w-[50%]"} duration-400 ${isScrolled ? 'pb-6 md:pb-3.5' : isMenuOpen ? "pb-20 md:pb-3.5" : ""}`} src={logo} width={isScrolled ? 100 : isMenuOpen ? 100 : 140} />
                     </Link>
                 </NavbarBrand>
 
@@ -93,7 +93,7 @@ export const NavbarComponent = () => {
             />
 
             {isMenuOpen && (
-                <NavbarMenu className="flex flex-col items-center sm:hidden pt-5 gap-2 bg-black/40">
+                <NavbarMenu className={`${isAtBenefits ? "bg-green-400/90" : "bg-black/40"} flex flex-col items-center sm:hidden pt-5 gap-2`}>
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link className="text-xl italic text-white" href={item.link} onClick={() => setIsMenuOpen(false)}>

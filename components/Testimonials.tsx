@@ -6,8 +6,8 @@ const Testimonials = () => {
   return (
     <section id="testimonials">
       <div className='py-20 w-[80%] m-auto flex flex-col justify-center items-center gap-10 '>
-        <h2 className={`${playfairDisplay.className} text-3xl font-bold text-black/60 text-center md:text-start`}>TESTIMONIOS DE LA EXPERIENCIA</h2>
-        <div className='border-b-1 border-black/50 w-[15rem] md:w-[30rem]' />
+        <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold text-orange-800 text-center md:text-start`}>TESTIMONIOS DE LA EXPERIENCIA</h2>
+        <div className="h-1 w-20 bg-orange-400 mx-auto rounded-full mb-6" />
       </div>
       <article className="flex flex-col gap-28 py-3 rounded-md items-center justify-center">
         <Testimonial gradient="right" reverse={false} />
