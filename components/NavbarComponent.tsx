@@ -55,7 +55,7 @@ export const NavbarComponent = () => {
 
     return (
         <Navbar
-            className={`${montserrat.className} sticky top-0 z-50 transition-all duration-300 ${isAtBenefits ? "bg-green-400/90 py-3" : isScrolled ? "bg-black/40 md:bg-black/10 backdrop-blur-md py-3" : "bg-transparent"
+            className={`${montserrat.className} sticky top-0 transition-all duration-300 ${isAtBenefits ? "bg-green-400/90 py-3" : isScrolled ? "bg-black/40 md:bg-black/10 backdrop-blur-md py-3" : "bg-transparent"
                 }`}
             isBlurred={false}
             isMenuOpen={isMenuOpen}
