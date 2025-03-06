@@ -3,6 +3,10 @@
 import { useState, useEffect, useRef } from "react"
 import { FaWhatsapp, FaCalendarAlt, FaClock, FaMapMarkerAlt } from "react-icons/fa"
 import { Playfair_Display } from "next/font/google"
+import Image from "next/image"
+
+import fruit1 from "@/public/fruit1.png"
+import fruit2 from "@/public/fruit2.png"
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -43,9 +47,19 @@ const CallAction = () => {
 
   return (
     <section
-      className="py-10 md:py-20 my-10 overflow-hidden bg-gradient-to-b from-amber-50 to-orange-50"
+      className="py-10 md:py-20 my-10 overflow-hidden bg-gradient-to-b from-amber-50 to-orange-50 relative"
       id="call-to-action"
     >
+      <Image
+        alt="Decorative flower"
+        className="absolute left-[1rem] md:left-[8rem] top-[8rem] md:top-[6rem] w-9 md:w-20 opacity-90 -rotate-[15deg] brightness-100"
+        src={fruit1}
+      />
+      <Image
+        alt="Decorative flower"
+        className="absolute right-[1rem] md:right-[8rem] top-[8.5rem] md:top-[7rem] w-14 md:w-36 opacity-90 -rotate-[15deg] brightness-100"
+        src={fruit2}
+      />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-8 md:py-16 flex flex-col justify-center items-center gap-6 md:gap-8 text-center">
           <h2

@@ -3,12 +3,27 @@
 import type React from "react"
 
 import { useState } from "react"
-import { User, Mail, Phone, MessageSquare, Send, CheckCircle, AlertCircle } from "lucide-react"
+import { User, Mail, Phone, MessageSquare, Send, CheckCircle, AlertCircle, Instagram } from "lucide-react"
 import { motion } from "framer-motion"
+import { PiTiktokLogo } from "react-icons/pi";
 
 import { playfairDisplay } from "@/utils/typographies"
 
 const Contact = () => {
+
+  const socialMedia = [
+    {
+      icon: Instagram,
+      link: "https://instagram.com/lallavedesol",
+      name: "Instagram"
+    },
+    {
+      icon: PiTiktokLogo,
+      link: "https://www.tiktok.com/@lallavedesol",
+      name: "Tiktok"
+    },
+  ]
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -71,11 +86,10 @@ const Contact = () => {
 
     setFormStatus("submitting")
 
-    // Simulate form submission
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setFormStatus("success")
-      // Reset form after success
+
       setTimeout(() => {
         setFormState({
           name: "",
@@ -151,21 +165,23 @@ const Contact = () => {
               <div className="mt-12">
                 <p className="text-sm opacity-80 mb-4">Síguenos en redes sociales</p>
                 <div className="flex gap-4">
-                  {["facebook", "instagram", "twitter"].map((social) => (
+                  {socialMedia.map((social) => (
                     <a
-                      key={social}
+                      key={social.name.toLowerCase()}
                       className="bg-white/20 p-2 rounded-full hover:bg-white/40 transition-colors"
-                      href={`#${social}`}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <span className="sr-only">{social}</span>
-                      <div className="w-5 h-5 flex items-center justify-center">{social[0].toUpperCase()}</div>
+                      <span className="sr-only">{social.name}</span>
+                      <social.icon className="h-5 w-5" />
                     </a>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
+
             <div className="md:col-span-3 p-8">
               <h3 className={`${playfairDisplay.className} text-xl font-bold text-gray-800 mb-6`}>
                 Envíanos un mensaje
@@ -239,15 +255,14 @@ const Contact = () => {
                   className={`
                                         w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-medium
                                         transition-all duration-300 relative overflow-hidden
-                                        ${
-                                          formStatus === "submitting"
-                                            ? "bg-orange-400 cursor-wait"
-                                            : formStatus === "success"
-                                              ? "bg-green-500"
-                                              : formStatus === "error"
-                                                ? "bg-red-500"
-                                                : "bg-orange-500 hover:bg-orange-600 hover:shadow-lg"
-                                        }
+                                        ${formStatus === "submitting"
+                      ? "bg-orange-400 cursor-wait"
+                      : formStatus === "success"
+                        ? "bg-green-500"
+                        : formStatus === "error"
+                          ? "bg-red-500"
+                          : "bg-orange-500 hover:bg-orange-600 hover:shadow-lg"
+                    }
                                     `}
                   disabled={formStatus === "submitting"}
                   type="submit"
@@ -266,12 +281,12 @@ const Contact = () => {
                         r="10"
                         stroke="currentColor"
                         strokeWidth="4"
-                       />
+                      />
                       <path
                         className="opacity-75"
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                         fill="currentColor"
-                       />
+                      />
                     </svg>
                   )}
 

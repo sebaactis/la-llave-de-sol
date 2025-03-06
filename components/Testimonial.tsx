@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react';
 
+import flower1 from "@/public/flower1.png"
 import img from "@/public/benefitsImg.jpg"
 
 const Testimonial = ({ reverse, gradient }: { reverse: boolean; gradient: string }) => {
@@ -26,7 +27,12 @@ const Testimonial = ({ reverse, gradient }: { reverse: boolean; gradient: string
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            {/* Subtle gradient overlay for depth */}
+            <Image
+                alt="Decorative flower"
+                className='absolute -left-20 -top-12 w-40 opacity-100 z-50'
+                src={flower1}
+            />
+            
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-40 pointer-events-none" />
 
             <Image
