@@ -1,11 +1,12 @@
 "use client"
 
 import background from "@/public/introBackground.webp"
+import background2 from "@/public/introBackground2.png"
 import { montserrat, playfairDisplay } from "@/utils/typographies";
 
 const Intro = () => {
     return (
-        <section className="bg-center bg-cover h-[50rem] z-20" id="home" style={{ backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent), url(${background.src})` }}>
+        <section className="bg-center bg-cover h-[50rem] z-20" id="home" style={{ backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent), url(${background2.src})` }}>
 
             <article className="flex flex-col items-center md:items-start text-center md:text-start pt-56 md:ml-40 gap-5 md:gap-2">
                 <h3 className={`${playfairDisplay.className} text-white text-lg md:text-3xl font-medium italic md:ml-3`}>BIENVENIDOS A LA LLAVE DE SOL</h3>

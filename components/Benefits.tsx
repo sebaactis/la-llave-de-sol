@@ -1,23 +1,77 @@
+"use client"
+
 import Image from 'next/image'
 import { HeartPulse, BrainIcon, Handshake } from "lucide-react"
+import { useState, useEffect } from 'react'
 
 import BenefitCard from './BenefitCard'
 
-import img from "@/public/benefitsImg.jpg"
+import img from "@/public/lallave1.png"
+import img2 from "@/public/lallave2.png"
+import img3 from "@/public/lallave3.png"
+import img4 from "@/public/lallave4.png"
+import img5 from "@/public/lallave5.png"
+import img6 from "@/public/lallave6.png"
 
 const Benefits = () => {
+  const images = [img, img2, img3, img4, img5, img6];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section className="container mx-auto px-6 py-24 mt-20" id="benefits">
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl mt-0 md:mt-20 2xl:mt-0">
-            <Image
-              alt="Relaxing candle setting"
-              className="transform hover:scale-105 transition-transform duration-500"
-              layout="fill"
-              objectFit="cover"
-              src={img}
-            />
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl mt-0 md:mt-20 2xl:mt-0 group">
+            {images.map((image, index) => (
+              <Image
+                key={index}
+                alt={`Imagen de beneficios ${index + 1}`}
+                className={`transform transition-all duration-700 ease-in-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+                  }`}
+                layout="fill"
+                objectFit="cover"
+                src={image}
+              />
+            ))}
+
+            <button
+              aria-label="Imagen anterior"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              onClick={() => setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)}
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+              </svg>
+            </button>
+
+            <button
+              aria-label="Imagen siguiente"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              onClick={() => setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)}
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+              </svg>
+            </button>
+
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentImageIndex ? 'bg-orange-500 w-4' : 'bg-white/60'
+                    }`}
+                  onClick={() => setCurrentImageIndex(index)}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
