@@ -29,16 +29,17 @@ const Testimonial = ({ reverse, gradient }: { reverse: boolean; gradient: string
         >
             <Image
                 alt="Decorative flower"
-                className='absolute -left-20 -top-12 w-40 opacity-100'
+                className='absolute -left-14
+                 md:-left-20 -top-12 w-28 md:w-40 opacity-100'
                 src={flower1}
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-40 pointer-events-none" />
 
-            <div className="relative aspect-[4/3] w-[50%] overflow-hidden rounded-2xl mt-0 md:mt-20 2xl:mt-0">
+            <div className="relative aspect-[4/3] w-[90%] md:w-[50%] overflow-hidden rounded-2xl mt-0 md:mt-20 2xl:mt-0">
                 <Image
                     alt="Testimonial image"
-                    className="rounded-2xl shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.02]  w-full"
+                    className="rounded-2xl shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.02] w-full"
                     layout="fill"
                     objectFit="cover"
                     src={img}

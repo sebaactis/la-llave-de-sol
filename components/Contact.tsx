@@ -6,7 +6,9 @@ import { useState } from "react"
 import { User, Mail, Phone, MessageSquare, Send, CheckCircle, AlertCircle, Instagram } from "lucide-react"
 import { motion } from "framer-motion"
 import { PiTiktokLogo } from "react-icons/pi";
+import Image from "next/image"
 
+import key1 from "@/public/key1.png"
 import { playfairDisplay } from "@/utils/typographies"
 
 const Contact = () => {
@@ -106,7 +108,12 @@ const Contact = () => {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-b from-amber-50 to-orange-50" id="contact">
+    <section className="py-16 bg-gradient-to-b from-amber-50 to-orange-50 relative" id="contact">
+      <Image
+        alt="Decorative flower"
+        className="absolute w-8 md:w-16 opacity-90 bottom-12 md:bottom-7 left-[1.2rem] md:left-[35rem] -rotate-[45deg] z-20 brightness-100"
+        src={key1}
+      />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -126,8 +133,9 @@ const Contact = () => {
         </motion.div>
 
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-3xl mx-auto">
+
           <div className="grid md:grid-cols-5">
-            <div className="md:col-span-2 bg-gradient-to-br from-orange-400 to-orange-600 p-8 text-white">
+            <div className="md:col-span-2 bg-gradient-to-br from-orange-400 to-orange-600 p-8 text-white ">
               <h3 className={`${playfairDisplay.className} text-xl font-bold mb-6`}>Información de Contacto</h3>
 
               <div className="space-y-6">
@@ -170,8 +178,8 @@ const Contact = () => {
                       key={social.name.toLowerCase()}
                       className="bg-white/20 p-2 rounded-full hover:bg-white/40 transition-colors"
                       href={social.link}
-                      target="_blank"
                       rel="noopener noreferrer"
+                      target="_blank"
                     >
                       <span className="sr-only">{social.name}</span>
                       <social.icon className="h-5 w-5" />
