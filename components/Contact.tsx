@@ -6,9 +6,7 @@ import { useState } from "react"
 import { User, Mail, Phone, MessageSquare, Send, CheckCircle, AlertCircle, Instagram } from "lucide-react"
 import { motion } from "framer-motion"
 import { PiTiktokLogo } from "react-icons/pi";
-import Image from "next/image"
 
-import key1 from "@/public/key1.png"
 import { playfairDisplay } from "@/utils/typographies"
 
 const Contact = () => {
@@ -108,12 +106,7 @@ const Contact = () => {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-b from-amber-50 to-orange-50 relative" id="contact">
-      <Image
-        alt="Decorative flower"
-        className="absolute w-8 md:w-16 opacity-90 bottom-12 md:bottom-7 left-[1.2rem] md:left-[35rem] -rotate-[45deg] z-20 brightness-100"
-        src={key1}
-      />
+    <section className="bg-[#FF972A] py-16 relative" id="contact">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -122,11 +115,11 @@ const Contact = () => {
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold text-orange-800 mb-4`}>
+          <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold italic text-white text-center`}>
             CONTACTO
           </h2>
-          <div className="h-1 w-20 bg-orange-400 mx-auto rounded-full mb-6" />
-          <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-600">
+          <div className="h-1 w-20 bg-white mx-auto rounded-full mb-6 mt-3" />
+          <p className="text-lg md:text-xl max-w-2xl mx-auto text-white">
             Estamos aquí para ayudarte en tu camino de sanación y crecimiento personal. ¿Tienes alguna pregunta?
             Escríbenos.
           </p>

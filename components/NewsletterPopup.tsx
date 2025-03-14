@@ -43,7 +43,7 @@ const NewsletterPopup = () => {
                             type="email"
                         />
                         <button
-                            className={`bg-[#d6002d] text-white font-bold py-2 px-4 rounded-2xl hover:bg-[#fd9ef8] transition-all duration-300 transform active:scale-125 active:translate-y-2 active:translate-x-2`}
+                            className={`bg-[#fd9ef8] text-white font-bold py-2 px-4 rounded-2xl hover:bg-[#dd7fd8] transition-all duration-300 transform active:scale-125 active:translate-y-2 active:translate-x-2`}
                             type="submit"
                         >
                             LO QUIERO YA

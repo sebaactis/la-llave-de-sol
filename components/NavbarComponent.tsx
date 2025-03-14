@@ -18,7 +18,6 @@ import { montserrat } from "@/utils/typographies";
 export const NavbarComponent = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isAtBenefits, setIsAtBenefits] = useState(false);
 
     const menuItems = [
         { title: "HOME", link: "/" },
@@ -30,19 +29,10 @@ export const NavbarComponent = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const benefitsSection = document.getElementById("benefits");
-            const benefitsOffset = benefitsSection ? benefitsSection.offsetTop - 200 : 0;
-
             if (window.scrollY > 160) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
-            }
-
-            if (window.scrollY >= benefitsOffset) {
-                setIsAtBenefits(true);
-            } else {
-                setIsAtBenefits(false);
             }
         };
 
@@ -55,7 +45,7 @@ export const NavbarComponent = () => {
 
     return (
         <Navbar
-            className={`${montserrat.className} sticky top-0 transition-all duration-300 ${isAtBenefits ? "bg-green-400/90 py-3" : isScrolled ? "bg-black/40 md:bg-black/10 backdrop-blur-md py-3" : "bg-transparent"
+            className={`${montserrat.className} sticky top-0 transition-all duration-300 ${isScrolled ? "bg-black/40 md:bg-black/10 backdrop-blur-md py-3" : "bg-transparent"
                 }`}
             isBlurred={false}
             isMenuOpen={isMenuOpen}
@@ -93,7 +83,7 @@ export const NavbarComponent = () => {
             />
 
             {isMenuOpen && (
-                <NavbarMenu className={`${isAtBenefits ? "bg-green-400/90" : "bg-black/40"} flex flex-col items-center sm:hidden pt-5 gap-2`}>
+                <NavbarMenu className={`bg-black/70 flex flex-col items-center sm:hidden pt-5 gap-2 mt-5`}>
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link className="text-xl italic text-white" href={item.link} onClick={() => setIsMenuOpen(false)}>

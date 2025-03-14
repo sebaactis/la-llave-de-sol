@@ -12,6 +12,7 @@ import img3 from "@/public/lallave3.png"
 import img4 from "@/public/lallave4.png"
 import img5 from "@/public/lallave5.png"
 import img6 from "@/public/lallave6.png"
+import { playfairDisplay } from '@/utils/typographies'
 
 const Benefits = () => {
   const images = [img, img2, img3, img4, img5, img6];
@@ -26,10 +27,11 @@ const Benefits = () => {
   }, [images.length]);
 
   return (
-    <section className="container mx-auto px-6 py-24 mt-20" id="benefits">
+    <section className="mt-20 pb-10 bg-[#fcebe1] mx-3 md:mx-0" id="benefits">
+      <p className={` ${playfairDisplay.className} text-3xl text-gray-700 italic text-center pb-10`}>{'Unite a la experiencia de "las 7 llaves" para transformar tu relación con la comida y con vos mismo'.toUpperCase()}</p>
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl mt-0 md:mt-20 2xl:mt-0 group">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl md:rounded-none md:rounded-r-2xl mt-0 md:mt-20 2xl:mt-0 group">
             {images.map((image, index) => (
               <Image
                 key={index}
@@ -75,8 +77,7 @@ const Benefits = () => {
           </div>
         </div>
 
-        <div className="space-y-4">
-          <p className='text-xl ml-1 font-semibold text-gray-700 italic text-center mb-5'>Unite a la experiencia de &quot;las 7 llaves&quot; para transformar tu relación con la comida y con vos mismo</p>
+        <div className="flex flex-col space-y-4 md:mr-5">
           <BenefitCard
             description="Recetas prácticas y simples que podrás hacer en 5 minutos para resolver tu día de manera espectacular."
             icon={<HeartPulse className="w-8 h-8 text-white" />}

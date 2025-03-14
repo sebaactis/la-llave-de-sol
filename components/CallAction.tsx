@@ -2,16 +2,9 @@
 
 import { useState, useEffect, useRef } from "react"
 import { FaWhatsapp, FaCalendarAlt, FaClock, FaMapMarkerAlt } from "react-icons/fa"
-import { Playfair_Display } from "next/font/google"
-import Image from "next/image"
 
-import fruit1 from "@/public/fruit1.png"
-import fruit2 from "@/public/fruit2.png"
+import { montserrat, playfairDisplay } from "@/utils/typographies"
 
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-})
 
 const CallAction = () => {
   const phoneNumber = "+5491124063003"
@@ -47,28 +40,15 @@ const CallAction = () => {
 
   return (
     <section
-      className="py-10 md:py-20 my-10 overflow-hidden bg-gradient-to-b from-amber-50 to-orange-50 relative"
+      className="py-5 pb-20 overflow-hidden relative bg-[#fcebe1]"
       id="call-to-action"
     >
-      <Image
-        alt="Decorative flower"
-        className="absolute left-[1rem] md:left-[8rem] top-[8rem] md:top-[6rem] w-9 md:w-20 opacity-90 -rotate-[15deg] brightness-100"
-        src={fruit1}
-      />
-      <Image
-        alt="Decorative flower"
-        className="absolute right-[1rem] md:right-[8rem] top-[8.5rem] md:top-[7rem] w-14 md:w-36 opacity-90 -rotate-[15deg] brightness-100"
-        src={fruit2}
-      />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-8 md:py-16 flex flex-col justify-center items-center gap-6 md:gap-8 text-center">
-          <h2
-            className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold text-orange-800 relative`}
-          >
-            ¡VOS TAMBIÉN PODÉS SER PARTE DEL CAMBIO!
-            <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-orange-500 rounded-full" />
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl">
+        <div className="py-8 md:py-16 flex flex-col justify-center items-center gap-3 text-center">
+          <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold italic text-[#ffaa50]
+           text-center md:text-start`}>¡VOS TAMBIÉN PODÉS SER PARTE DEL CAMBIO!</h2>
+          <div className="h-1 w-20 bg-[#ffaa50] mx-auto rounded-full mb-6" />
+          <p className={` ${montserrat.className} text-xl text-black/70 max-w-3xl italic`}>
             Únete a nuestra experiencia transformadora y descubre cómo puedes marcar la diferencia en tu vida y en la de
             los demás.
           </p>
@@ -105,9 +85,6 @@ const CallAction = () => {
           >
             <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-3xl shadow-xl overflow-hidden">
               <div className="relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-300 rounded-full -mr-16 -mt-16 opacity-30" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-700 rounded-full -ml-12 -mb-12 opacity-20" />
-
                 <div className="relative p-8 md:p-10">
                   <h3 className={`${playfairDisplay.className} text-2xl md:text-3xl font-bold text-white mb-6`}>
                     Próxima Experiencia

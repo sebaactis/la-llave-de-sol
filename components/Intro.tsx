@@ -12,9 +12,9 @@ const Intro = () => {
 
             <article className="flex flex-col items-center md:items-start text-center md:text-start pt-56 md:ml-40 gap-5 md:gap-2">
                 <h3 className={`${playfairDisplay.className} text-white text-lg md:text-3xl font-medium italic md:ml-3`}>BIENVENIDOS A LA LLAVE DE SOL</h3>
-                <h1 className={`${montserrat.className} text-white text-4xl md:text-6xl md:w-[45%] font-semibold tracking-wide px-3 md:px-0 pt-1`}>¿Y si dejar el azúcar y el glúten fuera mas sencillo de lo que pensas?</h1>
+                <h1 className={`${montserrat.className} text-white text-4xl md:text-5xl md:w-[45%] tracking-wide px-3 md:px-0 pt-2`}>{"¿Y si dejar el azúcar y el glúten fuera mas sencillo de lo que pensas?".toUpperCase()}</h1>
                 <button
-                    className={`${montserrat.className} text-white text-lg md:text-xl bg-[#d6002d] rounded-full px-10 md:px-12 py-3 hover:bg-[#fd9ef8] transition-all duration-400 mt-5`}
+                    className={`${montserrat.className} text-white text-lg md:text-xl bg-[#fd9ef8] rounded-full px-10 md:px-12 py-3 hover:bg-[#dd7fd8] transition-all duration-500 mt-5`}
                     onClick={() => {
                         const benefitsSection = document.getElementById('benefits');
 

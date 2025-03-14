@@ -23,7 +23,7 @@ export default function RootLayout({
         className={`${monoSans.className} min-h-screen `}
       >
         <NavbarComponent />
-        <main>
+        <main className="bg-[#fcebe1]">
           <NewsletterPopup />
           {children}
         </main>
