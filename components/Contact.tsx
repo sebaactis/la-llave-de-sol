@@ -8,6 +8,7 @@ import { motion } from "framer-motion"
 import { PiTiktokLogo } from "react-icons/pi";
 
 import { playfairDisplay } from "@/utils/typographies"
+import { FaYoutube } from "react-icons/fa"
 
 const Contact = () => {
 
@@ -70,7 +71,6 @@ const Contact = () => {
       [name]: value,
     }))
 
-    // Clear error when user types
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -107,7 +107,7 @@ const Contact = () => {
 
   return (
     <section className="bg-[#FF972A] py-16 relative" id="contact">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 lg:px-8">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -125,10 +125,9 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-3xl mx-auto">
-
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-5xl mx-auto">
           <div className="grid md:grid-cols-5">
-            <div className="md:col-span-2 bg-gradient-to-br from-orange-400 to-orange-600 p-8 text-white ">
+            <div className="md:col-span-2 bg-gradient-to-br from-orange-400 to-orange-600 p-0 py-8 px-5 md:p-8 text-white ">
               <h3 className={`${playfairDisplay.className} text-xl font-bold mb-6`}>Información de Contacto</h3>
 
               <div className="space-y-6">
@@ -138,7 +137,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Email</p>
-                    <p className="font-medium">contacto@lallavesol.com</p>
+                    <p className="font-medium">experienciaslallavedesol@gmail.com</p>
                   </div>
                 </div>
 
@@ -183,7 +182,7 @@ const Contact = () => {
             </div>
 
 
-            <div className="md:col-span-3 p-8">
+            <div className="md:col-span-3 col-span-1 p-0 py-8 px-5 md:p-8 mr-2 md:mr-0">
               <h3 className={`${playfairDisplay.className} text-xl font-bold text-gray-800 mb-6`}>
                 Envíanos un mensaje
               </h3>

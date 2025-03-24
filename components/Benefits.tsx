@@ -12,7 +12,7 @@ import img3 from "@/public/lallave3.png"
 import img4 from "@/public/lallave4.png"
 import img5 from "@/public/lallave5.png"
 import img6 from "@/public/lallave6.png"
-import { playfairDisplay } from '@/utils/typographies'
+import { montserrat, playfairDisplay } from '@/utils/typographies'
 
 const Benefits = () => {
   const images = [img, img2, img3, img4, img5, img6];
@@ -28,7 +28,8 @@ const Benefits = () => {
 
   return (
     <section className="mt-20 pb-10 bg-[#fcebe1] mx-3 md:mx-0" id="benefits">
-      <p className={` ${playfairDisplay.className} text-3xl text-gray-700 italic text-center pb-10`}>{'Unite a la experiencia de "las 7 llaves" para transformar tu relación con la comida y con vos mismo'.toUpperCase()}</p>
+      <p className={` ${playfairDisplay.className} text-2xl md:text-4xl text-gray-700 text-center font-semibold`}>UNITE A LA EXPERIENCIA</p>
+      <p className={`${montserrat.className} text-xl md:text-2xl font-light text-center pb-7 pt-2`}>transformá tu relación con la comida y con vos mismo</p>
       <div className="grid lg:grid-cols-2 gap-12  items-center">
         <div className="space-y-8">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl md:rounded-none md:rounded-r-2xl mt-0 md:mt-20 2xl:mt-0 group">

@@ -67,7 +67,7 @@ const CallAction = () => {
                 controls
                 loop
                 muted
-                className="w-full h-auto max-h-[500px] object-cover"
+                className="w-full h-auto max-h-[600px] md:max-h-[800px] object-cover"
                 poster="/placeholder.svg?height=500&width=400"
               >
                 <source
@@ -97,7 +97,7 @@ const CallAction = () => {
                       </div>
                       <div>
                         <p className="text-white/70 text-sm">Fecha</p>
-                        <p className="text-white text-lg font-semibold">DD/MM/YYYY</p>
+                        <p className="text-white text-lg font-semibold">26/04/2025</p>
                       </div>
                     </div>
 
@@ -107,7 +107,7 @@ const CallAction = () => {
                       </div>
                       <div>
                         <p className="text-white/70 text-sm">Horario</p>
-                        <p className="text-white text-lg font-semibold">XX.XX Hs</p>
+                        <p className="text-white text-lg font-semibold">12:00 Hs (pm)</p>
                       </div>
                     </div>
 
@@ -117,7 +117,7 @@ const CallAction = () => {
                       </div>
                       <div>
                         <p className="text-white/70 text-sm">Lugar</p>
-                        <p className="text-white text-lg font-semibold">Calle 123 - Buenos Aires</p>
+                        <p className="text-white text-lg font-semibold">Av Cabildo 3062 - Buenos Aires</p>
                       </div>
                     </div>
                   </div>
