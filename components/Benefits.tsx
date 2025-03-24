@@ -29,7 +29,7 @@ const Benefits = () => {
   return (
     <section className="mt-20 pb-10 bg-[#fcebe1] mx-3 md:mx-0" id="benefits">
       <p className={` ${playfairDisplay.className} text-3xl text-gray-700 italic text-center pb-10`}>{'Unite a la experiencia de "las 7 llaves" para transformar tu relación con la comida y con vos mismo'.toUpperCase()}</p>
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="grid lg:grid-cols-2 gap-12  items-center">
         <div className="space-y-8">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl md:rounded-none md:rounded-r-2xl mt-0 md:mt-20 2xl:mt-0 group">
             {images.map((image, index) => (

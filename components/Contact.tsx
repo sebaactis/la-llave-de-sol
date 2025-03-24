@@ -115,7 +115,7 @@ const Contact = () => {
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold italic text-white text-center`}>
+          <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold text-white text-center`}>
             CONTACTO
           </h2>
           <div className="h-1 w-20 bg-white mx-auto rounded-full mb-6 mt-3" />
