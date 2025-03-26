@@ -30,6 +30,7 @@ main {
     width: 100%;
 }
 
+
 @keyframes bounce-custom {
     0%, 100% {
       transform: translateY(0);

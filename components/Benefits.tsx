@@ -28,8 +28,8 @@ const Benefits = () => {
 
   return (
     <section className="mt-20 pb-10 bg-[#fcebe1] mx-3 md:mx-0" id="benefits">
-      <p className={` ${playfairDisplay.className} text-2xl md:text-4xl text-gray-700 text-center font-semibold`}>UNITE A LA EXPERIENCIA</p>
-      <p className={`${montserrat.className} text-xl md:text-2xl font-light text-center pb-7 pt-2`}>transformá tu relación con la comida y con vos mismo</p>
+      <p className={` ${playfairDisplay.className} text-3xl md:text-5xl text-gray-700 text-center font-semibold`}>UNITE A LA EXPERIENCIA</p>
+      <p className={`${montserrat.className} text-xl md:text-2xl font-light text-center pb-7 pt-2`}>Transformá tu relación con la comida y con vos mismo</p>
       <div className="grid lg:grid-cols-2 gap-12  items-center">
         <div className="space-y-8">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl md:rounded-none md:rounded-r-2xl mt-0 md:mt-20 2xl:mt-0 group">

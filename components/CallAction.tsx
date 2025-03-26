@@ -49,7 +49,7 @@ const CallAction = () => {
            text-center md:text-start`}>¡VOS TAMBIÉN PODÉS SER PARTE DEL CAMBIO!</h2>
           <div className="h-1 w-20 bg-[#ffaa50] mx-auto rounded-full mb-6" />
           <p className={` ${montserrat.className} text-xl text-black/70 max-w-3xl italic`}>
-            Únete a nuestra experiencia transformadora y descubre cómo puedes marcar la diferencia en tu vida y en la de
+            Unite a nuestra experiencia transformadora y descubrí cómo puedes marcar la diferencia en tu vida y en la de
             los demás.
           </p>
         </div>

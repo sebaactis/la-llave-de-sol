@@ -16,6 +16,7 @@ export const testimonialData = [
     name: "Nombre Persona",
     initial: "C",
     img: "/placeholder.svg?height=400&width=300",
+    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ export const testimonialData = [
     name: "Nombre Persona",
     initial: "O",
     img: "/placeholder.svg?height=400&width=300",
+    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const testimonialData = [
     name: "Nombre Persona",
     initial: "T",
     img: "/placeholder.svg?height=400&width=300",
+    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ export const testimonialData = [
     name: "Nombre Persona",
     initial: "T",
     img: "/placeholder.svg?height=400&width=300",
+    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
   },
   {
     id: 5,
@@ -44,6 +48,7 @@ export const testimonialData = [
     name: "Nombre Persona",
     initial: "T",
     img: "/placeholder.svg?height=400&width=300",
+    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
   },
   {
     id: 6,
@@ -51,6 +56,7 @@ export const testimonialData = [
     name: "Nombre Persona",
     initial: "T",
     img: "/placeholder.svg?height=400&width=300",
+    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
   },
 ]
 
@@ -75,10 +81,10 @@ export default function TestimonialsSection() {
   <div className="mx-auto">
     
     <div className="mb-12 md:mb-24 flex flex-col justify-center items-center gap-3">
-      <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold text-white text-center`}>
+      <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold text-gray-600 text-center`}>
         TESTIMONIOS DE LA EXPERIENCIA
       </h2>
-      <div className="h-1 w-20 bg-white mx-auto rounded-full" />
+      <div className="h-1 w-20 bg-gray-600 mx-auto rounded-full" />
     </div>
 
     <div className="relative">
@@ -99,13 +105,13 @@ export default function TestimonialsSection() {
         </CarouselContent>
 
         <div className="flex justify-center mt-20">
-          <CarouselPrevious className="mt-3 relative h-11 w-11 rounded-full border-white text-white bg-white/20 hover:bg-white/40 hover:text-white" />
-          <div className="flex gap-1 text-white text-lg -mx-6">
+          <CarouselPrevious className="mt-3 relative h-11 w-11 rounded-full border-gray-600 text-gray-600 bg-white/20 hover:bg-white/40 hover:text-gray-600" />
+          <div className="flex gap-1 text-gray-600 text-lg -mx-6">
             <span>{current}</span>
             <span>/</span>
             <span>{count}</span>
           </div>
-          <CarouselNext className="mt-3 relative h-11 w-11 rounded-full border-white text-white bg-white/20 hover:bg-white/40 hover:text-white" />
+          <CarouselNext className="mt-3 relative h-11 w-11 rounded-full border-gray-600 text-gray-600 bg-white/20 hover:bg-white/40 hover:text-gray-600" />
         </div>
       </Carousel>
     </div>

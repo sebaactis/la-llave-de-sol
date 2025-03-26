@@ -29,9 +29,8 @@ const NewsletterPopup = () => {
                         ✕
                     </button>
 
-                    <h2 className="text-xl font-bold text-center mb-4">7 días de desayuno saludable</h2>
+                    <h2 className="text-xl font-bold text-center mb-4">Regalo de bienvenida</h2>
                     <p className="text-gray-600 text-center mb-6">
-                        Regalo de bienvenida <br />
                         7 desayunos sin azúcar y sin glúten
                         para que arranques tu día con medicina en tu cocina
                     </p>
