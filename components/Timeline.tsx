@@ -1,134 +1,133 @@
 "use client"
-
 import { useState } from "react"
 import Image from "next/image"
 
-import { playfairDisplay } from "@/utils/typographies"
+import { montserrat, playfairDisplay } from "@/utils/typographies"
 import keyOrange from "@/public/llaveNaranja.png"
 import keyRed from "@/public/llaveRoja.png"
 import keyGreen from "@/public/llaveVerde.png"
 import keyPink from "@/public/llaveRosa.png"
 
-
-
 interface TimelinePoint {
   id: number
-  title: string
-  description: string
+  label: string
+  keyImage: any
 }
 
 const timelineData: TimelinePoint[] = [
   {
     id: 1,
-    title: "El poder de transformar tu vida",
-    description: "Mi transformacion personal y el poder de autocuración",
+    label: "El poder de transformar tu vida",
+    keyImage: keyOrange,
   },
   {
     id: 2,
-    title: "El poder de un comienzo positivo",
-    description: "El poder de transformar tu vida",
+    label: "El poder de un comienzo positivo",
+    keyImage: keyRed,
   },
   {
     id: 3,
-    title: "Dominá tu tiempo para nutrir tu vid",
-    description: "El poder de transformar tu vida",
+    label: "Dominá tu tiempo para nutrir tu vida",
+    keyImage: keyGreen,
   },
   {
     id: 4,
-    title: "El poder de los antioxidante",
-    description: "Tus aliados de cada día",
+    label: "El poder de los antioxidantes",
+    keyImage: keyPink,
   },
   {
     id: 5,
-    title: "Revitalizá tus tardes",
-    description: "El poder de transformar tu vida",
+    label: "Revitalizá tus tardes",
+    keyImage: keyOrange,
   },
   {
     id: 6,
-    title: "Hacele caso a tu reloj biológico",
-    description: "El poder de transformar tu vida",
+    label: "Hacele caso a tu reloj biológico",
+    keyImage: keyRed,
   },
   {
     id: 7,
-    title: "Compromiso con el cambio verdadero",
-    description: "El poder de transformar tu vida",
-  }
+    label: "Compromiso con el cambio verdadero",
+    keyImage: keyGreen,
+  },
 ]
 
 const Timeline = () => {
   const [activePoint, setActivePoint] = useState<number | null>(null)
 
   return (
-    <div className="w-[80%] mx-auto px-4 py-16">
-      <h2 className={`${playfairDisplay.className} text-5xl font-bold text-[#ffaa50] text-center mb-16`}>
+    <div className="px-4 py-16 md:mx-6 2xl:mx-auto 2xl:w-[80%]">
+      <h2 className={`${playfairDisplay.className} mb-16 text-center text-5xl font-bold text-[#ffaa50] md:mb-28`}>
         LAS 7 LLAVES
       </h2>
 
-      <div className="relative py-80
-      ">
-        {/* Timeline line */}
-        <div className="absolute left-0 right-0 h-0.5 bg-[#FF972A] z-0" style={{ top: "50%" }} />
+      <div className="relative md:hidden">
+        <div className="absolute left-8 top-0 h-full w-0.5 bg-gray-600" />
 
-        {/* Timeline points */}
-        <div className="flex justify-between relative z-10">
-          {timelineData.map((point, index) => {
-            const isAbove = index % 2 === 0 // Alternating pattern: first above, second below, etc.
-            const keyDistance = isAbove ? -130 : 80 // Distance from timeline to key
-            const lineStart = isAbove ? -5 : 5 // Small gap from timeline
-            const lineEnd = isAbove ? -65 : 65 // Small gap before key
-
-            return (
-              <div
-                key={point.id}
-                className="flex flex-col items-center relative"
-                onMouseEnter={() => setActivePoint(point.id)}
-                onMouseLeave={() => setActivePoint(null)}
-              >
-
+        <div className="flex flex-col space-y-16">
+          {timelineData.map((point) => (
+            <div
+              key={point.id}
+              className="flex items-center"
+              onMouseEnter={() => setActivePoint(point.id)}
+              onMouseLeave={() => setActivePoint(null)}
+            >
+              <div className="flex flex-col -mt-12">
                 <div
-                  className={`w-0.5 absolute left-1/2 -translate-x-1/2 transition-colors duration-300 ${activePoint === point.id ? "bg-[#FF972A]" : "bg-[#FF972A]"
-                    }`}
-                  style={{
-                    top: "50%",
-                    height: isAbove ? "60px" : "60px",
-                    transform: `translateY(${lineStart}px)`,
-                    marginTop: isAbove ? lineEnd : 0,
-                    marginBottom: isAbove ? 0 : lineEnd,
-                  }}
-                />
-
-                <div
-                  className={`w-28 h-28 md:w-36 md:h-36 ${isAbove && "-mt-24"} overflow-hidden transition-all duration-300 absolute left-1/2 -translate-x-1/2 `}
-                  style={{
-                    top: `calc(50% + ${keyDistance}px)`,
-                  }}
+                  className={`${playfairDisplay.className} -ml-5 flex h-16 w-16 items-center justify-center rounded-full border-gray-600 text-4xl text-gray-600`}
                 >
-                  <div className="relative w-full h-full">
-                    <Image
-                      fill
-                      alt={point.title}
-                      className="transition-all duration-300 hover:scale-110 hover:brightness-75 hover:contrast-125 hover:-hue-rotate-30"
-                      src={keyPink}
-                    />
-                  </div>
+                  {point.id}
                 </div>
 
-                <div
-                  className={`absolute w-64 
-                     bg-white/30  rounded-lg p-4 shadow-lg transition-all duration-400 ${activePoint === point.id ? "opacity-100" : "opacity-0 pointer-events-none"
-                    }`}
-                  style={{
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    [isAbove ? "bottom" : "top"]: isAbove ? "230px" : "230px",
-                  }}
-                >
-                  <h3 className={`${playfairDisplay.className} text-xl font-bold text-[#FF972A] mb-2 text-center`}>{point.title}</h3>
-                  <p className="text-gray-800 text-sm text-center">{point.description}</p>
+                <div className="h-0.5 w-12 bg-gray-600" />
+
+              </div>
+              <div className="flex items-center">
+                <div className="h-32 w-32 overflow-hidden">
+                  <Image
+                    alt={point.label}
+                    className="transition-all duration-300 hover:scale-110"
+                    src={point.keyImage || "/placeholder.svg"}
+                  />
+                </div>
+
+                <div className="mt-2 w-48">
+                  <p className={`${montserrat.className} text-md font-medium text-gray-700 w-[90%]`}>{point.label}</p>
                 </div>
               </div>
-            )
-          })}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="hidden py-14 md:block">
+        <div className="h-0.5 bg-gray-600" />
+
+        <div className="flex justify-between">
+          {timelineData.map((point) => (
+            <div
+              key={point.id}
+              className="flex flex-col items-center"
+              onMouseEnter={() => setActivePoint(point.id)}
+              onMouseLeave={() => setActivePoint(null)}
+            >
+              <div className={`${playfairDisplay.className} -mt-20 mb-10 text-5xl text-gray-600`}>{point.id}</div>
+
+              <div className="h-14 w-[0.12rem] -mt-6 bg-gray-600" />
+
+              <div className="mt-4 h-32 w-32 overflow-hidden">
+                <Image
+                  alt={point.label}
+                  className="transition-all duration-300 hover:scale-110"
+                  src={point.keyImage || "/placeholder.svg"}
+                />
+              </div>
+
+              <div className="mt-2 w-48 text-center">
+                <p className={`${montserrat.className} text-md font-medium text-gray-700`}>{point.label}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

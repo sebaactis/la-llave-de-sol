@@ -5,6 +5,7 @@ import Intro from "@/components/Intro";
 import Presentation from "@/components/Presentation";
 import Testimonials from "@/components/Testimonials";
 import Timeline from "@/components/Timeline";
+
 export default function Home() {
   return (
     <>
