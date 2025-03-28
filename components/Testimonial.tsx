@@ -21,7 +21,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 
   return (
     <div className="flex flex-col items-center px-4 md:px-8 z-20">
-      <div className="relative w-48 h-48 md:w-80 md:h-80 rounded-full overflow-hidden mb-6 border-4 border-gray-600">
+      <div className="relative w-80 h-80 rounded-full overflow-hidden mb-6 border-4 border-gray-600">
         <video
           loop
           playsInline
