@@ -19,7 +19,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 
   return (
     <div className="flex flex-col items-center px-4 md:px-8 z-20">
-      <div className="relative w-96 h-96 rounded-full overflow-hidden mb-6 border-3 border-gray-600">
+      <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden mb-6 border-1 border-gray-800">
 
         <Image
           alt="Imagen testimonio"
@@ -31,14 +31,14 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
       </div>
 
       <div className="max-w-md text-center">
-        <h3 className={`${playfairDisplay.className} text-2xl font-bold text-gray-600 italic mb-2`}>
+        <h3 className={`${playfairDisplay.className} text-2xl font-bold text-gray-800 italic mb-2`}>
           Comida saludable que <span className="block">realmente satisface.</span>
         </h3>
 
-        <p className="text-gray-600 mb-6 leading-relaxed">{testimonial.text}</p>
+        <p className="text-gray-800 mb-6 leading-relaxed">{testimonial.text}</p>
 
-        <div className="inline-block border border-gray-600/70 rounded-full px-8 py-2">
-          <span className="text-gray-600 font-medium">— {testimonial.name}</span>
+        <div className="inline-block border border-gray-800/70 rounded-full px-8 py-2">
+          <span className="text-gray-800 font-medium">— {testimonial.name}</span>
         </div>
       </div>
     </div>
