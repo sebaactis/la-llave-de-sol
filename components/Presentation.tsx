@@ -7,7 +7,7 @@ const Presentation = () => {
             <h2 className={` ${playfairDisplay.className} text-2xl md:text-4xl font-bold text-white text-center mx-6 md:mx-10 -mt-5 md:-mt-0`}>¿POR QUÉ TE CUESTA TANTO DEJAR EL AZUCAR Y EL GLUTEN?  </h2>
 
             <div className='border-b-1 border-white w-[15rem] md:w-[30rem] self-center' />
-            <div className="mx-2 flex justify-center items-center">
+            <div className="mx-2 md:mx-36 flex justify-center items-center">
                 <iframe
                     allowFullScreen
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
