@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
   }, [api])
 
   return (
-    <section className="bg-[#ff982ab4] py-16 md:pt-20 relative" id="testimonials">
+    <section className="bg-[#ff982adf] py-16 md:pt-20 relative" id="testimonials">
       <div className="mx-auto">
         <div className="mb-12 md:mb-24 flex flex-col justify-center items-center gap-3">
           <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold text-gray-800 text-center`}>
