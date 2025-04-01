@@ -7,6 +7,12 @@ import TestimonialCard from "./Testimonial"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { playfairDisplay } from "@/utils/typographies"
 
+import img from "@/public/a141.webp"
+import img2 from "@/public/a168.webp"
+import img3 from "@/public/a157.webp"
+import img4 from "@/public/a137.webp"
+import img5 from "@/public/a142.webp"
+import img6 from "@/public/a125.webp"
 
 export const testimonialData = [
   {
@@ -14,42 +20,42 @@ export const testimonialData = [
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "C",
-    img: "/a141.jpg",
+    img: img
   },
   {
     id: 2,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "O",
-    img: "/a168.jpg",
+    img: img2
   },
   {
     id: 3,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "T",
-    img: "/a157.jpg",
+    img: img3
   },
   {
     id: 4,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "T",
-    img: "/a137.jpg",
+    img: img4
   },
   {
     id: 5,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "T",
-    img: "/a142.jpg",
+    img: img5
   },
   {
     id: 6,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "T",
-    img: "/a125.jpg",
+    img: img6
   },
 ]
 

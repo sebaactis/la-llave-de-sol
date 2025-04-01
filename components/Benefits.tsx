@@ -7,15 +7,21 @@ import { useState, useEffect } from 'react'
 import BenefitCard from './BenefitCard'
 
 import { montserrat, playfairDisplay } from '@/utils/typographies'
+import img from "@/public/a195.webp"
+import img2 from "@/public/a48.webp"
+import img3 from "@/public/a130.webp"
+import img4 from "@/public/a154.webp"
+import img5 from "@/public/a196.webp"
+import img6 from "@/public/a194.webp"
 
 const Benefits = () => {
   const images = [
-    "/a195.jpg",
-    "/a48.jpg",
-    "/a130.jpg",
-    "/a154.jpg",
-    "/a196.jpg",
-    "/a194.jpg"
+    img,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
