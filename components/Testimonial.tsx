@@ -19,7 +19,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 
   return (
     <div className="flex flex-col items-center px-4 md:px-8 z-20">
-      <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden mb-6 border-1 border-gray-800">
+      <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden mb-6 ">
 
         <Image
           alt="Imagen testimonio"
