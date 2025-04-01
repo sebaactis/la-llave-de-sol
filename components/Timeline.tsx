@@ -102,7 +102,7 @@ const Timeline = () => {
                 </div>
                 <div className="flex items-center">
                   <div className="h-32 w-32 overflow-hidden">
-                  <Image
+                    <Image
                       alt={point.label}
                       className={`transition-all duration-300 hover:scale-110`}
                       src={point.keyImage || "/placeholder.svg"}
@@ -133,12 +133,12 @@ const Timeline = () => {
               >
                 <div className="flex justify-center -mt-36 ml-2">
                   <div className={`${playfairDisplay.className} text-5xl text-gray-600 -mr-7`}>{point.id}</div>
-                  <div 
-                  className="h-32 w-32 overflow-hidden"
+                  <div
+                    className="h-32 w-32 overflow-hidden"
                   >
                     <Image
                       alt={point.label}
-                      className={`transition-all duration-300 hover:scale-110`}
+                      className={`transition-all duration-300 hover:scale-105`}
                       src={point.keyImage || "/placeholder.svg"}
                       style={{ marginTop: `-${point.size}rem` }}
                     />

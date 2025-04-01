@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 
-
 import TestimonialCard from "./Testimonial"
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
@@ -15,48 +14,42 @@ export const testimonialData = [
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "C",
-    img: "/placeholder.svg?height=400&width=300",
-    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
+    img: "/a141.jpg",
   },
   {
     id: 2,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "O",
-    img: "/placeholder.svg?height=400&width=300",
-    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
+    img: "/a168.jpg",
   },
   {
     id: 3,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "T",
-    img: "/placeholder.svg?height=400&width=300",
-    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
+    img: "/a157.jpg",
   },
   {
     id: 4,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "T",
-    img: "/placeholder.svg?height=400&width=300",
-    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
+    img: "/a137.jpg",
   },
   {
     id: 5,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "T",
-    img: "/placeholder.svg?height=400&width=300",
-    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
+    img: "/a142.jpg",
   },
   {
     id: 6,
     text: "Eaque dignissimos reiciendis iste quam. Ut porro harum saepe. Repudiandae repellendus sapiente nesciunt ullam esse quia rem non voluptates pariatur doloribus.",
     name: "Nombre Persona",
     initial: "T",
-    img: "/placeholder.svg?height=400&width=300",
-    video: "https://storage.googleapis.com/msgsndr/XbIroeCo43YzroXkLcgO/media/67289aa684cd8364415c81f7.mp4"
+    img: "/a125.jpg",
   },
 ]
 

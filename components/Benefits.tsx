@@ -6,16 +6,17 @@ import { useState, useEffect } from 'react'
 
 import BenefitCard from './BenefitCard'
 
-import img from "@/public/lallave1.png"
-import img2 from "@/public/lallave2.png"
-import img3 from "@/public/lallave3.png"
-import img4 from "@/public/lallave4.png"
-import img5 from "@/public/lallave5.png"
-import img6 from "@/public/lallave6.png"
 import { montserrat, playfairDisplay } from '@/utils/typographies'
 
 const Benefits = () => {
-  const images = [img, img2, img3, img4, img5, img6];
+  const images = [
+    "/a195.jpg",
+    "/a48.jpg",
+    "/a130.jpg",
+    "/a154.jpg",
+    "/a196.jpg",
+    "/a194.jpg"
+  ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -37,10 +38,9 @@ const Benefits = () => {
               <Image
                 key={index}
                 alt={`Imagen de beneficios ${index + 1}`}
-                className={`transform transition-all duration-700 ease-in-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-                  }`}
+                className={`transform transition-all duration-700 ease-in-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
                 layout="fill"
-                objectFit="cover"
+                objectFit='cover'
                 src={image}
               />
             ))}
