@@ -11,7 +11,7 @@ const Presentation = () => {
                 <iframe
                     allowFullScreen
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    className="w-full m-auto rounded-xl overflow-hidden md:min-h-[37rem] min-h-[18.2rem] "
+                    className="w-full m-auto rounded-xl overflow-hidden md:min-h-[43rem] min-h-[18.2rem] "
                     src="https://www.youtube.com/embed/x4B9nPGK78k?rel=0&modestbranding=1&controls=0&showinfo=0"
                     title="YouTube video player" />
             </div>

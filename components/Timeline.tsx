@@ -1,7 +1,3 @@
-"use client"
-import { useState } from "react"
-import Image from "next/image"
-
 import { montserrat, playfairDisplay } from "@/utils/typographies"
 
 interface TimelinePoint {
@@ -49,7 +45,6 @@ const timelineData: TimelinePoint[] = [
 ]
 
 const Timeline = () => {
-  const [activePoint, setActivePoint] = useState<number | null>(null)
 
   return (
     <div>
@@ -64,8 +59,6 @@ const Timeline = () => {
               <div
                 key={point.id}
                 className="flex flex-col items-center w-full md:w-1/7"
-                onMouseEnter={() => setActivePoint(point.id)}
-                onMouseLeave={() => setActivePoint(null)}
               >
                 <div className="flex flex-col items-center">
                   <div className={`${playfairDisplay.className} text-5xl font-extralight text-orange-600 mb-2`}>

@@ -45,9 +45,8 @@ const CallAction = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-8 md:py-16 flex flex-col justify-center items-center gap-3 text-center">
-          <h2 className={`${playfairDisplay.className} text-3xl md:text-4xl font-bold text-[#ffaa50]
-           text-center md:text-start`}>¡VOS TAMBIÉN PODÉS SER PARTE DEL CAMBIO!</h2>
-          <div className="h-1 w-20 bg-[#ffaa50] mx-auto rounded-full mb-6" />
+          <h2 className={`${playfairDisplay.className} text-3xl md:text-5xl text-gray-700 text-center font-semibold`}>¡VOS TAMBIÉN PODÉS SER PARTE DEL CAMBIO!</h2>
+          <div className="h-1 w-20 bg-gray-700 mx-auto rounded-full mb-6" />
           <p className={` ${montserrat.className} text-xl text-black/70 max-w-3xl italic`}>
             Unite a nuestra experiencia transformadora y descubrí cómo puedes marcar la diferencia en tu vida y en la de
             los demás.
