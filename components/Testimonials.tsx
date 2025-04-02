@@ -70,7 +70,7 @@ export default function TestimonialsSection() {
 
     const interval = setInterval(() => {
       api.scrollNext()
-    }, 200000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [api])
