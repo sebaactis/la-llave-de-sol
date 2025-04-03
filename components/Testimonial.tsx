@@ -5,6 +5,7 @@
 
 import Image from "next/image"
 import { StaticImport } from "next/dist/shared/lib/get-img-props"
+import { montserrat } from "@/utils/typographies"
 
 interface Testimonial {
   name: string
@@ -27,12 +28,12 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
       </div>
 
       <div className="max-w-md text-center flex flex-col min-h-[200px]">
-        <p className="text-gray-800 mb-6 leading-normal text-lg mx-2 mt-5">
-          {testimonial.text}
+        <p className={`${montserrat.className} text-white mb-6 leading-normal text-lg mx-2 mt-5 italic`}>
+          “{testimonial.text}”
         </p>
 
-        <div className="inline-block border border-gray-800/70 rounded-full py-2 mt-auto w-52 mx-auto">
-          <span className="text-gray-800 font-medium">— {testimonial.name}</span>
+        <div className="inline-block border border-white-800/70 rounded-full py-2 mt-auto w-52 mx-auto">
+          <span className="text-white font-medium">— {testimonial.name}</span>
         </div>
       </div>
     </div>

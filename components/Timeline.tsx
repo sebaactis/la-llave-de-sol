@@ -10,37 +10,37 @@ const timelineData: TimelinePoint[] = [
   {
     id: 1,
     title: "El poder de transformar tu vida",
-    description: "Transformacion personal y el poder de autocuración"
+    description: "Aprenderás a meditar y conectar con el momento presente"
   },
   {
     id: 2,
     title: "El poder de un comienzo positivo",
-    description: "Transformacion personal y el poder de autocuración"
+    description: "Descubrirás el impacto del azúcar y su reemplazo nutritivo."
   },
   {
     id: 3,
     title: "Dominá tu tiempo para nutrir tu vida",
-    description: "Transformacion personal y el poder de autocuración"
+    description: "Cocinaremos pastas sin harinas inflamatorias en solo 10 minutos."
   },
   {
     id: 4,
     title: "El poder de los antioxidantes",
-    description: "Transformacion personal y el poder de autocuración"
+    description: "Incorporaras antioxidantes simples en tus hábitos diarios."
   },
   {
     id: 5,
     title: "Revitalizá tus tardes",
-    description: "Transformacion personal y el poder de autocuración"
+    description: "Cocinaremos meriendas saludables y activaremos tu energía con movimiento."
   },
   {
     id: 6,
     title: "Hacele caso a tu reloj biológico",
-    description: "Transformacion personal y el poder de autocuración"
+    description: "Aprenderás sobre tus ritmos naturales y como elegir un antojo que te hace bien. "
   },
   {
     id: 7,
     title: "Compromiso con el cambio verdadero",
-    description: "Transformacion personal y el poder de autocuración"
+    description: "Ejercicio final para diseñar tu nueva versión y vivir como queres."
   },
 ]
 
@@ -48,9 +48,9 @@ const Timeline = () => {
 
   return (
     <div>
-      <div className="px-4 py-2 md:py-16 md:mx-6 2xl:mx-auto 2xl:w-[80%]">
+      <div className="py-2 md:py-16 md:mx-6 2xl:mx-auto 2xl:w-[90%]">
         <h2 className={` ${playfairDisplay.className} text-3xl md:text-5xl text-gray-700 text-center font-semibold md:mb-20`}>
-          7 MÓDULOS 1 TRANSFORMACIÓN
+          SIETE MÓDULOS, UNA TRANSFORMACIÓN
         </h2>
 
         <div className="py-8">
@@ -70,7 +70,7 @@ const Timeline = () => {
                   <div className="w-10 border-t-2 border-gray-600 mt-3" />
                 </div>
 
-                <div className="mt-4 w-48 text-center">
+                <div className="mt-4 w-[14.5rem] text-center">
                   <p className={`${montserrat.className} text-base font-normal text-orange-600`}>{point.description}</p>
                 </div>
               </div>

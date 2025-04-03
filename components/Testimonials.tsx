@@ -79,10 +79,10 @@ export default function TestimonialsSection() {
     <section className="bg-[#ff982adf] py-16 md:pt-20 relative" id="testimonials">
       <div className="mx-auto">
         <div className="mb-12 md:mb-24 flex flex-col justify-center items-center gap-3">
-          <h2 className={`${playfairDisplay.className} text-3xl md:text-5xl text-gray-700 text-center font-semibold`}>
+          <h2 className={`${playfairDisplay.className} text-3xl md:text-5xl text-white text-center font-semibold`}>
             TESTIMONIOS DE LA EXPERIENCIA
           </h2>
-          <div className="h-1 w-20 bg-gray-700 mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-white mx-auto rounded-full" />
         </div>
 
         <div className="relative">
@@ -103,13 +103,13 @@ export default function TestimonialsSection() {
             </CarouselContent>
 
             <div className="flex justify-center mt-20">
-              <CarouselPrevious className="mt-3 relative h-11 w-11 rounded-full border-gray-800 text-gray-800 bg-white/20 hover:bg-white/40 hover:text-gray-600" />
-              <div className="flex gap-1 text-gray-800 text-lg -mx-6">
+              <CarouselPrevious className="mt-3 relative h-11 w-11 rounded-full border-white text-white bg-white/30 hover:bg-white/60 hover:text-white/70" />
+              <div className="flex gap-1 text-white text-lg -mx-6">
                 <span>{current}</span>
                 <span>/</span>
                 <span>{count}</span>
               </div>
-              <CarouselNext className="mt-3 relative h-11 w-11 rounded-full border-gray-800 text-gray-800 bg-white/20 hover:bg-white/40 hover:text-gray-600" />
+              <CarouselNext className="mt-3 relative h-11 w-11 rounded-full border-white text-white bg-white/30 hover:bg-white/60 hover:text-white/70" />
             </div>
           </Carousel>
         </div>
