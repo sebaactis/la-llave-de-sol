@@ -6,49 +6,43 @@ import TestimonialCard from "./Testimonial"
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { playfairDisplay } from "@/utils/typographies"
-import img from "@/public/a141.jpg"
-import img2 from "@/public/a154.webp"
-import img3 from "@/public/a157.jpg"
-import img4 from "@/public/a130.jpg"
-import img5 from "@/public/a142.jpg"
-import img6 from "@/public/a125.jpg"
 
 export const testimonialData = [
   {
     id: 1,
     text: "Me encantó, superó ampliamente todas las expectativas que tenía. Es algo que me abrió mucho la mente, me da más terreno para poder hacer cosas nuevas.",
     name: "Javier",
-    img: img
+    img: "/a141.jpg"
   },
   {
     id: 2,
     text: "Hubo varias cosas que resonaron mucho con partes de mi historia. Esta muy bueno detenernos en algunos momentos y ver cuál es el proceso que vamos haciendo todos.",
     name: "Sofía",
-    img: img2
+    img: "/a154.webp"
   },
   {
     id: 3,
     text: "Es mucho más que aprender a comer. Viste cuando te venden una experiencia transformadora y uno dice, bueno, ¿cuánto? Literal, entrás de una manera, salís con otra cabeza.",
     name: "Magalí",
-    img: img6
+    img: "/a157.jpg"
   },
   {
     id: 4,
     text: "Toca puntos que todos nos podemos sentir identificados en mayor o menor medida. Te hace pensar en tu día a día, qué querés mejorar, qué querés cambiar.",
     name: "Tiziana",
-    img: img4
+    img: "/a130.jpg"
   },
   {
     id: 5,
     text: "Si no sabes nada de cocina, que vení directo.  Si sabes cocina te vas a sorprender. Así que es una experiencia recomendada para todo público.",
     name: "Florencia",
-    img: img5
+    img: "/a142.jpg"
   },
   {
     id: 6,
     text: "Vengo de gustos tradicionales y me llamó muchísimo la atención lo rico que estuvo todo.",
     name: "Favio",
-    img: img3
+    img: "/a125.jpg"
   }
 
 ]

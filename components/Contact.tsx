@@ -9,6 +9,7 @@ import { PiTiktokLogo } from "react-icons/pi";
 
 import { playfairDisplay } from "@/utils/typographies"
 
+
 const Contact = () => {
 
   const socialMedia = [
@@ -79,30 +80,46 @@ const Contact = () => {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (!validateForm()) return
+    if (!validateForm()) return;
 
-    setFormStatus("submitting")
+    setFormStatus("submitting");
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      setFormStatus("success")
+      const response = await fetch("https://formspree.io/f/mvgkvlgk", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          phone: formState.phone,
+          message: formState.message,
+        }),
+      });
 
-      setTimeout(() => {
+      const result = await response.json();
+
+      if (result.ok) {
+        setFormStatus("success");
         setFormState({
           name: "",
           email: "",
           phone: "",
           message: "",
-        })
-        setFormStatus("idle")
-      }, 3000)
-    } catch (error) {
-      setFormStatus("error")
-      setTimeout(() => setFormStatus("idle"), 3000)
+        });
+      } else {
+        throw new Error("Error al enviar");
+      }
+    } catch  {
+      setFormStatus("error");
+    } finally {
+      setTimeout(() => setFormStatus("idle"), 3000);
     }
-  }
+  };
 
   return (
     <section className="bg-[#FF972A] py-16 relative" id="contact">
