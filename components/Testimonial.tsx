@@ -1,16 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 "use client"
 
-import Image from "next/image"
+
 import { StaticImport } from "next/dist/shared/lib/get-img-props"
+
 import { montserrat } from "@/utils/typographies"
 
 interface Testimonial {
   name: string
   text: string
-  img?: string | StaticImport
+  img?: string | undefined
 }
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
@@ -19,10 +21,9 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <div className="flex flex-col items-center px-4 md:px-8 z-20">
       <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden mb-6">
-        <Image
+        <img
           alt="Imagen testimonio"
-          layout="fill"
-          objectFit="cover"
+          className="absolute inset-0 w-full h-full object-cover"
           src={testimonial.img || "/defaultImage.jpg"}
         />
       </div>

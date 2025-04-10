@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import {
@@ -8,7 +9,6 @@ import {
     NavbarBrand,
     NavbarMenuItem,
 } from "@nextui-org/navbar";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -17,8 +17,6 @@ import { montserrat } from "@/utils/typographies";
 export const NavbarComponent = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-
-    const logo = "/logo.png";
 
     const menuItems = [
         { title: "HOME", link: "/" },
@@ -57,7 +55,11 @@ export const NavbarComponent = () => {
             <NavbarContent>
                 <NavbarBrand className={`${isScrolled ? "mt-5 md:mt-2" : "mt-20"}`}>
                     <Link href="/">
-                        <Image alt="logo" className={`transition-all ${isScrolled ? "w-[60%]" : "w-[50%]"} duration-400 ${isScrolled ? 'pb-6 md:pb-3.5' : isMenuOpen ? "pb-20 md:pb-3.5" : ""}`} height={10} src={logo} width={isScrolled ? 100 : isMenuOpen ? 100 : 140}/>
+                        <img
+                            alt="logo"
+                            className={`transition-all duration-400 ${isScrolled ? "w-[30%] md:w-[10%] pb-6 md:pb-3.5" : isMenuOpen ? "w-[30%] md:w-[50%] pb-16 md:pb-3.5" : "w-[40%] md:w-[15%]"}`}
+                            src="/logo.png"
+                        />
                     </Link>
                 </NavbarBrand>
 

@@ -18,7 +18,7 @@ export const testimonialData = [
     id: 2,
     text: "Hubo varias cosas que resonaron mucho con partes de mi historia. Esta muy bueno detenernos en algunos momentos y ver cuál es el proceso que vamos haciendo todos.",
     name: "Sofía",
-    img: "/a154.webp"
+    img: "/a154.jpg"
   },
   {
     id: 3,

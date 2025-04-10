@@ -1,6 +1,5 @@
 "use client"
 
-import Image from 'next/image'
 import { HeartPulse, BrainIcon, Handshake } from "lucide-react"
 import { useState, useEffect } from 'react'
 
@@ -34,12 +33,11 @@ const Benefits = () => {
         <div className="space-y-8">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl md:rounded-none md:rounded-r-2xl mt-0 md:mt-20 2xl:mt-0 group">
             {images.map((image, index) => (
-              <Image
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
                 key={index}
                 alt={`Imagen de beneficios ${index + 1}`}
-                className={`transform transition-all duration-700 ease-in-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-                layout="fill"
-                objectFit='cover'
+                className={`transform transition-all duration-700 ease-in-out absolute inset-0 object-cover w-full h-full ${index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
                 src={image}
               />
             ))}
