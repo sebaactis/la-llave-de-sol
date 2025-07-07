@@ -12,6 +12,9 @@ const CallAction = () => {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isVideoVisible, setIsVideoVisible] = useState(false)
 
+  const [fecha, setFecha] = useState("");
+  const [direccion, setDireccion] = useState("");
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,6 +40,17 @@ const CallAction = () => {
       }
     }
   }, [])
+
+  useEffect(() => {
+    fetch('/datos.txt')
+      .then(response => response.text())
+      .then(text => {
+        const [fechaTxt, direccionTxt] = text.trim().split("|");
+
+        setFecha(fechaTxt);
+        setDireccion(direccionTxt);
+      });
+  }, []);
 
   return (
     <section
@@ -96,7 +110,7 @@ const CallAction = () => {
                       </div>
                       <div>
                         <p className="text-white/70 text-sm">Fecha</p>
-                        <p className="text-white text-lg font-semibold">26/04/2025</p>
+                        <p className="text-white text-lg font-semibold">{fecha}</p>
                       </div>
                     </div>
 
@@ -116,7 +130,7 @@ const CallAction = () => {
                       </div>
                       <div>
                         <p className="text-white/70 text-sm">Lugar</p>
-                        <p className="text-white text-lg font-semibold">Av Cabildo 3062 - Buenos Aires</p>
+                        <p className="text-white text-lg font-semibold">{direccion}</p>
                       </div>
                     </div>
                   </div>
