@@ -13,7 +13,7 @@ const NewsletterPopup = () => {
         const email = emailInput.value;
 
         const formData = new FormData();
-        
+
         formData.append("EMAIL", email);
         formData.append("u", "b53aeb6e2cf533144bd2d6f76");
         formData.append("id", "ada9892778");
@@ -53,8 +53,7 @@ const NewsletterPopup = () => {
 
                     <h2 className="text-xl font-bold text-center mb-4">Regalo de bienvenida</h2>
                     <p className="text-gray-600 text-center mb-6">
-                        7 desayunos sin azúcar y sin glúten
-                        para que arranques tu día con medicina en tu cocina
+                        Suscríbete y te mando la receta del bien!
                     </p>
                     {success ? (
                         <div className="text-center text-[#fd9ef8] font-semibold">
